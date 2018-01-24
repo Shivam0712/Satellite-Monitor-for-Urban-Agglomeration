@@ -12,10 +12,10 @@ The sytem will identify urban places and will keep record of its co-ordinates:
 ## How this will work?
 A CNN model will be the core of this model.
 
-###For feature 1: Augmenting new coordinates of URBAN CITIES.
+### For feature 1: Augmenting new coordinates of URBAN CITIES.
 High night light value pixels will be identified in whole India.
 A thumbnail of nearing pixels will be passed to the model and will get classified as Urban or Not.
 If True then thumbnail of similar size in all the 8 directions: N,S,E,W, NE, NW, SE, SW will be passed to the model. If again any of the thumbnail gets classified as urban, nearing thumbnails of that thumbnail will be passed into the model and the loop will continue till it breaks. Once the loop is complete, the constructed picture of these thumbnails will be passed into another model which will mark the boundaries and generate KML file.
 
-###For feature 2:Study growth of these agglomerations.
+### For feature 2:Study growth of these agglomerations.
 The boundary file generated will be compared to the boundary file of previous run and if there is some change; then, the change will be quantified and studied again. 
